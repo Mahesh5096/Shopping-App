@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Catalog" icon-name="standard:catalog">
+        <lightning-layout multiple-rows horizontal-align="center">
+
+
+            <template for:each={products} for:item="product">
+                <lightning-layout-item key={product.Id} size="12" small-device-size="6" medium-device-size="4"
+                    large-device-size="3">
+                    <c-products onselected={handleProductSelected} product={product}></c-products>
+                </lightning-layout-item>
+            </template>
+
+        </lightning-layout>
+    </lightning-card>
+</template>
